@@ -5,7 +5,7 @@ sourceCpp("neg_sampling.cpp")
 sourceCpp("cpp_funs.cpp")
 
 update_gce_model<- function(gc_model, epochs = 5, n_minibatches = 1000, n_neg_samples = 10, samp_pow = 0.75,
-                           beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-8, lambda_phi = 0, lambda_alpha = 0, 
+                           beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-8, lambda_phi = 1, lambda_alpha = 0, 
                            alpha_learn = 0.01, trace_indices = NULL){
   # total iterations
   total_iter<- epochs * n_minibatches
